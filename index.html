@@ -1,1 +1,97 @@
-<!DOCTYPE html><html lang=en><head><meta charset=utf-8><meta http-equiv=X-UA-Compatible content="IE=edge"><meta name=viewport content="width=device-width,initial-scale=1"><link rel=icon href=./favicon.ico><title>TH</title><link href=/my-project/css/app.871bf67d.css rel=preload as=style><link href=/my-project/css/chunk-vendors.cbc2a074.css rel=preload as=style><link href=/my-project/js/app.29fa1347.js rel=preload as=script><link href=/my-project/js/chunk-vendors.841d9ad0.js rel=preload as=script><link href=/my-project/css/chunk-vendors.cbc2a074.css rel=stylesheet><link href=/my-project/css/app.871bf67d.css rel=stylesheet></head><body><noscript><strong>We're sorry but TH doesn't work properly without JavaScript enabled. Please enable it to continue.</strong></noscript><div id=app></div><script src=/my-project/js/chunk-vendors.841d9ad0.js></script><script src=/my-project/js/app.29fa1347.js></script></body></html>
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+    
+    <title>Jason攻略組</title>
+
+    <style>
+        .parallax {
+        background-image: url("images/parallax.JPG");
+        height: 300px;
+        background-attachment: fixed;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        }
+        p.nav-link{
+        font-family: Microsoft JhengHei;
+        color: white;
+        }
+    </style>
+  
+</head>
+  
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-info">
+    <a class="navbar-brand" href="#">Jason攻略組</a>
+
+    <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+        <li class="nav-item active">
+            <p class="nav-link" id="front">Home </p>
+        </li>
+        <li class="nav-item">
+            <p class="nav-link active" id="pad1">鷹騎士</p>
+        </li>
+        <li class="nav-item">
+            <p class="nav-link active" id="pad2">計體力</p>
+        </li>
+        <li class="nav-item">
+            <p class="nav-link active" id="pad3">全版陣機率</p>
+        </li>
+        </ul>
+    </div>
+    </nav>
+
+    <!--parallax -->
+    <div class="parallax">
+        <h1 style="text-align: center;padding: 100px;">去佢個page like comment subscribe </h1>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-10 offset-md-1 bg-light mt-4" style="text-align: center;">
+                <div id="mainbody" class="mb-3">
+                    <h1>Hello, world!</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        $("#mainbody").load("front.html")
+
+        $("#front").click(function(){
+            $("#mainbody").empty()
+            $("#mainbody").load("front.html")
+        })
+
+        $("#pad1").click(function(){
+            $("#mainbody").empty()
+            $("#mainbody").load("eagleknight.html")
+        })
+
+        $("#pad2").click(function(){
+            $("#mainbody").empty()
+            $("#mainbody").load("counter.html")
+        })
+        $("#pad3").click(function(){
+            $("#mainbody").empty()
+            $("#mainbody").load("pad.html")
+        })
+    </script>
+    
+</body>
+
+</html>
