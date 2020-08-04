@@ -46,11 +46,19 @@
         </li>
         <li class="nav-item dropdown">
             <p class="nav-link active dropdown-toggle" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              19工具
+              打機工具
             </p>
             <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
               <p class="dropdown-item" id="pad2">計體力</p>
               <p class="dropdown-item" id="pad3">計全版陣機率</p>
+            </div>
+          </li>
+          <li class="nav-item dropdown">
+            <p class="nav-link active dropdown-toggle" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              19工具
+            </p>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+              <p class="dropdown-item" id="brianyoutube">Brian</p>
             </div>
           </li>
         </ul>
@@ -92,6 +100,10 @@
         $("#pad3").click(function(){
             $("#mainbody").empty()
             $("#mainbody").load("pad.html")
+        })
+        $("#brianyoutube").click(function(){
+            $("#mainbody").empty()
+            $("#mainbody").load("brian.html")
         })
     </script>
     
