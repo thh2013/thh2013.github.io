@@ -1,1 +1,1 @@
-A simple webpage saving my friends' gaming walkthrough and tools
+A simple webpage saving some game walkthroughs and tools
