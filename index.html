@@ -64,7 +64,12 @@
 
     <!--parallax -->
     <div class="parallax" style=" background-image: url('images/parallax1.JPG')">
-        <h1 style="text-align: center;padding: 100px;color: red;font-weight: bold;">告急!!! 訂閱人數下降了!!! 趕快subscribe!!!</h1>
+        <h1 id="title1" style="text-align: center;padding: 100px;color: red;font-weight: bold;"></h1>
+        <script>
+            count=0;
+            setInterval(function(){if(count<83){$("#title1").text("告急!!! 訂閱人數得翻"+count+"人");count++;}},30);  
+        </script>
+        
     </div>
 
     <div class="container">
