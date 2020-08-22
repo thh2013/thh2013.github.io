@@ -1,0 +1,60 @@
+<!--Vue-->
+<script src="js/vue.min.js" type="text/javascript"></script>
+
+<div id="app">
+    <h2 style="font-weight: bold;">光大罪頭 速刷+升技 </h2>
+    
+    <div class="contaniner"><div class="row">
+    <div class="col-6">
+        <img src="images/bigsin/bigsin1.JPG" data-toggle="modal" data-target="#exampleModal">
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-scrollable"><div class="modal-content"><div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">技能重點</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+            </button>
+            </div>
+            <div class="modal-body">
+                <table class="table">
+                  <tr><th>成員</th><th>技能</th></tr>
+                  <tr v-for="(x,y) in teammate">
+                    <td>{{x}}</td>
+                    <td>{{detailt[y]}}</td>
+                  </tr>
+                  <tr v-for="(x,y) in weapon">
+                    <td>{{x}}</td>
+                    <td>{{detailw[y]}}</td>
+                  </tr>
+                </table>
+            </div>
+        </div></div></div>
+        <table class="table">
+        <thead><tr><th>隊員</th><th>繼承</th></tr></thead>
+        <tr v-for="(x,y) in teammate">
+          <td>{{x}}</td>
+          <td>{{weapon[y]}}</td></tr>
+        </table>
+    </div>
+    <div class="col-6">
+      <ul v-for="(x,y) in numbering">
+        <h3 class="bg-dark text-white">第{{x}}層</h3>
+        <h5>{{instructions[y]}}</h5>
+      </ul>
+      <img src="images/bigsin/bigsin2.JPG" width="300">
+    </div>
+    </div></div>
+</div>
+
+<script>
+  var app = new Vue({
+      el: '#app',
+      data: {
+          teammate:["5765-幪面超人01","5961-大天使","2940-絕海龍","5873-點陣宙斯","6384-光大罪頭","6069-孫悟空金時"],
+          weapon:["3236-白幻","5289-蛋黃哥奧丁","4648-光魔女","5814-光之護封劍","條鎖匙","6421-光5星大罪龍"],
+          detailt:["buff+輕減","點燈+鎖珠","(容器)","回血+一橫光","(升技)","(容器)"],
+          detailw:["全版火光","解封+解覺+一橫光","全版光","回血","(光大罪出現條件)","光回珠各15"],
+          numbering:[1,2,3,4,5],
+          instructions:["01開技","大天使開技","(如減CD就空轉)->絕海龍開技","點陣宙斯開技","金時開技->大天使開技->01開技->轉9筒"],
+  }
+  })
+</script>
